@@ -3,7 +3,7 @@
 
 	<head>
 		<title>Avoid The Bin</title>
-		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 	</head>
 
 <body>
@@ -14,7 +14,7 @@
 		</div>	
 
 		<div id="contact-form">
-			<form method="post" action="/listed">
+			<form method="post" action="/added">
 				<label for="name">Name:</label>
 				<input type="name" id="name" name="name" required="required">
 				<label for="food">Food:</label>
