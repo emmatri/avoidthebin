@@ -35,7 +35,7 @@ def list_it():
 	postcode = form_data["postcode"]
 
 	users.append({"name": name, "food": food,"postcode": postcode})
-	return "Thanks " + name + "! You have successfully added " + food
+	return render_template('itemadded.html',  user = form_data)
 
 
 app.run(debug=True)

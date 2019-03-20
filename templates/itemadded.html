@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Avoid The Bin</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	</head>
+
+	<body>
+		<div class="jumbotron text-center">
+			<div class="col-sm-12 ">
+				<h1>Thanks for helping to Avoid The Bin!</h1>
+			</div>
+		</div>	
+		<p> Thank you {{ user.name }} for helping us avoid the bin. We hope that your item {{ user.food }} will soon be picked up! </p>
+	</body>
+</html>
