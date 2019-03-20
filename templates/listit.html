@@ -1,13 +1,24 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
+
 	<head>
-		<title>List your leftovers</title>
+		<title>Avoid The Bin</title>
+		<link rel="stylesheet" href="../css/bootstrap.css">
 	</head>
 
-	<body>
+<body>
+	<div class="jumbotron text-center">
+		<div class="col-sm-12 ">
+				<h1>List your food.</h1>
+			</div>
+		</div>	
+
 		<div id="contact-form">
-			<form method="post" action="/signup">
+			<form method="post" action="/listed">
+				<label for="name">Name:</label>
+				<input type="name" id="name" name="name" required="required">
+				<label for="food">Food:</label>
+				<input type="food" id="food" name="food" required="required">
 				<label for="postcode">Postcode:</label>
 				<input type="postcode" id="postcode" name="postcode" required="required">
 				<input type="submit" value="Submit" id="submit-button">

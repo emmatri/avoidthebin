@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Avoid The Bin</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	</head>
+
+	<body>
+		<div class="jumbotron text-center">
+			<div class="col-sm-12 ">
+				<h1>Find food near you.</h1>
+			</div>
+		</div>	
+		<ul>	
+         	{% for food in listed %}
+            <li>{{ food }} </li>
+         	{% endfor %}
+     	</ul>
+	</body>
+</html>
