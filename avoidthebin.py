@@ -1,12 +1,20 @@
 from flask import Flask, render_template, request
+from flask_navigation import Navigation
 
-app = Flask("MyApp")
+app = Flask("AvoidTheBin")
+nav = Navigation(app)
+
+nav.Bar('top', [
+	nav.Item('Home', 'home'),
+    nav.Item('List It', 'listit'),
+    nav.Item('Listed', 'listed'),
+])
 
 @app.route("/")
 def home():
 	return render_template("index.html")
 
-@app.route("/list")
+@app.route("/listit")
 def listit():
 	return render_template("listit.html")
 
