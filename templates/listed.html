@@ -19,10 +19,15 @@
 				<h1>Find food near you.</h1>
 			</div>
 		</div>	
-		<ul>	
-         	{% for food in listed %}
-            <li>{{ food }} </li>
-         	{% endfor %}
+		<ul>
+			{% if listed is defined and listed|length > 0 %}
+        	 	{% for food in listed %}
+            	<li>{{ food }} </li>
+         		{% endfor %}
+         	{% else %}
+         		<p> Sorry there isn't anything available right now!</p>
+         	{% endif %}
+
      	</ul>
 	</body>
 </html>
