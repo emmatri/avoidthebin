@@ -3,67 +3,87 @@
 
 <head>
 	<title>Avoid The Bin</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+		<link rel='stylesheet' href='{{ url_for('static', filename='css/main.css')}}'>
 </head>
 
 <body>
 	<ul>
     	{% for item in nav.top %}
-    	<li class="{{ 'active' if item.is_active else '' }}">
-        	<a href="{{ item.url }}">{{ item.label }}</a>
+    	<li class='{{ 'active' if item.is_active else '' }}'>
+        	<a href='{{ item.url }}'>{{ item.label }}</a>
     	</li>
-    	{% endfor %}	
+    	{% endfor %}
 	</ul>
-	<div class="jumbotron text-center">
-		<div class="col-sm-12 ">
-<!--       <div class="row text-center caption">
--->        <h1>Avoid The Bin.</h1>
+	<div class='jumbotron text-center bg-green'>
+		<div class='col-sm-12 '>
+<!--       <div class='row text-center caption'>
+-->        <h1>Avoid The Bin</h1>
 <!-- </div> -->
 </div>
 </div>
 
-<section class="text-center" id="mission">
-	<div class="container container-text bg-grey">
-		<div class="row">
+<section class='text-center' id='mission'>
+	<div class='container container-text bg-green'>
+		<div class='row'>
 			<div class='col-sm-12'>
-				<h2>We are on a mission to reduce the amount of waste that ends up in the bin.</h2>
-				<h2>So why not get involved now!</h2>
-				<img class="img-responsive" src='images/nobin.png'>
+				<h2>We are on a mission to reduce the amount of waste that ends up in the bin...</h2>
+				<h3>1.9 million tonnes of food is wasted by the food industry every year in the UK</h3>
+				<h3>250,000 tonnes of the food that goes to waste each year is still edible</h3>
+				<h2>So why not get involved and sign up now!</h2>
+				<img class='img-responsive' src='/static/nobin.png'>
+				<img class='img-responsive' src='/static/lovefood.png'>
+				<img class='img-responsive' src='/static/intro.png'>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center" id="nearby">
-	<div class="container container-text bg-green">
-		<div class="row">
+<section class='text-center' id='nearby'>
+	<div class='container container-text bg-grey'>
+		<div class='row'>
 			<div class='col-sm-12'>
-				<h2>See what's available near you. </h2>
-				<a href="/listed" class="btn btn-default">Listed</a>
+				<div class=image>
+				<h2>See what's available near you! </h2>
+				<h3>Click below for bargins...</h3>
+				<a href='/listed' class='btn btn-default'>Listed</a>
+				<img class='img-responsive' src='/static/veg.png'>
+				<img class='img-responsive' src='/static/sushi.png'>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center" id="nearby">
-	<div class="container container-text bg-purple">
-		<div class="row">
+<section class='text-center' id='nearby'>
+	<div class='container container-text bg-green'>
+		<div class='row'>
 			<div class='col-sm-12'>
 				<h2>Got something you want to avoid the bin?</h2>
-				<a href="/list" class="btn btn-default">List It</a>
+				<h3>Upload here...</h3>
+				<a href='/list' class='btn btn-default'>List It</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class='text-center' id='twitter'>
+	<div class='container container-text bg-blue'>
+		<div class='row'>
+			<div class='col-sm-12'>
+<a class="twitter-timeline" href="https://twitter.com/avoidthebin?ref_src=twsrc%5Etfw">Tweets by avoidthebin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 		</div>
 	</div>
 </section>
 
 <div id='social-buttons' class='text-center'>
-	<button class="btn btn-lg btn-twitter">Twitter</button>
-	<button class="btn btn-lg btn-facebook">Facebook</button>
-	<button class="btn btn-lg btn-instagram">Instagram</button>
+	<button class='btn btn-lg btn-twitter'>Twitter</button>
+	<button class='btn btn-lg btn-facebook'>Facebook</button>
+	<button class='btn btn-lg btn-instagram'>Instagram</button>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script tpye="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script tpye='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
 
 </body>
