@@ -12,6 +12,9 @@
     	<li class='{{ 'active' if item.is_active else '' }}'>
         	<a href='{{ item.url }}'>{{ item.label }}</a>
     	</li>
+			<li>
+				<a href='/Login' class='btn btn-default'>Login</a>
+			</li>
     	{% endfor %}
 	</ul>
 	<div class='jumbotron text-center bg-green'>
@@ -27,8 +30,8 @@
 		<div class='row'>
 			<div class='col-sm-12'>
 				<h2>We are on a mission to reduce the amount of waste that ends up in the bin...</h2>
-				<h3>1.9 million tonnes of food is wasted by the food industry every year in the UK</h3>
-				<h3>250,000 tonnes of the food that goes to waste each year is still edible</h3>
+				<h2>1.9 million tonnes of food is wasted by the food industry every year in the UK</h2>
+				<h2>250,000 tonnes of the food that goes to waste each year is still edible</h2>
 				<h2>So why not get involved and sign up now!</h2>
 				<img class='img-responsive' src='/static/nobin.png'>
 				<img class='img-responsive' src='/static/lovefood.png'>
@@ -44,7 +47,7 @@
 			<div class='col-sm-12'>
 				<div class=image>
 				<h2>See what's available near you! </h2>
-				<h3>Click below for bargins...</h3>
+				<h2>Click below for bargins...</h2>
 				<a href='/listed' class='btn btn-default'>Listed</a>
 				<img class='img-responsive' src='/static/veg.png'>
 				<img class='img-responsive' src='/static/sushi.png'>
@@ -59,7 +62,7 @@
 		<div class='row'>
 			<div class='col-sm-12'>
 				<h2>Got something you want to avoid the bin?</h2>
-				<h3>Upload here...</h3>
+				<h2>Upload here...</h2>
 				<a href='/list' class='btn btn-default'>List It</a>
 			</div>
 		</div>

@@ -8,10 +8,9 @@
 <body>
 	<ul>
     	{% for item in nav.top %}
-    	<li class="{{ 'active' if item.is_active else '' }}">
-        	<a href="{{ item.url }}">{{ item.label }}</a>
-    	</li>
-    	{% endfor %}
+      <li>
+				<a href='/Login' class='btn btn-default'>Login</a>
+			</li>
 	</ul>
 	<div class="jumbotron text-center">
 		<div class="col-sm-12 ">
