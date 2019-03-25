@@ -41,9 +41,22 @@ def list_it():
 	name = form_data["name"]
 	food = form_data["food"]
 	postcode = form_data["postcode"]
-
 	users.append({"name": name, "food": food,"postcode": postcode})
 	return render_template('itemadded.html',  user = form_data)
+
+@app.route("/Login")
+def Login():return render_template('Login.html')
+
+@app.route('/Login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('home'))
+    return render_template('Login.html', error=error)
+
 
 
 app.run(debug=True)

@@ -7,15 +7,42 @@
 </head>
 
 <body>
-	<ul>
+	<style>
+	.special{padding-top: 1}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+
+<ul>
     	{% for item in nav.top %}
     	<li class='{{ 'active' if item.is_active else '' }}'>
         	<a href='{{ item.url }}'>{{ item.label }}</a>
     	</li>
-			<li>
+    	{% endfor %}
+			<li class='special'>
 				<a href='/Login' class='btn btn-default'>Login</a>
 			</li>
-    	{% endfor %}
 	</ul>
 	<div class='jumbotron text-center bg-green'>
 		<div class='col-sm-12 '>
@@ -49,6 +76,7 @@
 				<h2>See what's available near you! </h2>
 				<h2>Click below for bargins...</h2>
 				<a href='/listed' class='btn btn-default'>Listed</a>
+				<br>
 				<img class='img-responsive' src='/static/veg.png'>
 				<img class='img-responsive' src='/static/sushi.png'>
 				</div>

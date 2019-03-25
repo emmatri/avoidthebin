@@ -6,28 +6,27 @@
 	</head>
 
 <body>
-	<ul>
+  <ul>
     	{% for item in nav.top %}
-      <li>
-				<a href='/Login' class='btn btn-default'>Login</a>
-			</li>
+    	<li class="{{ 'active' if item.is_active else '' }}">
+        	<a href="{{ item.url }}">{{ item.label }}</a>
+    	</li>
+    	{% endfor %}
 	</ul>
 	<div class="jumbotron text-center">
 		<div class="col-sm-12 ">
 				<h1>Please Login</h1>
-			</div>
-		</div>
 
-		<div id="contact-form">
-			<form method="post" action="/added">
-				<label for="Email">Email:</label>
-				<input type="Email" id="Email" name="Email" required="required">
-				<label for="Username">Username:</label>
-				<input type="Username" id="Username" name="Username" required="required">
-				<label for="Password">Password:</label>
-				<input type="Password" id="Password" name="Password" required="required">
-				<input type="Login" value="Login" id="Login-button">
-			</form>
-		</div>
+    <form action="" method="post">
+            <input type="text" placeholder="Username" name="username" value="{{
+              request.form.username }}">
+             <input type="password" placeholder="Password" name="password" value="{{
+              request.form.password }}">
+            <input class="btn btn-default" type="submit" value="Login">
+          </form>
+          {% if error %}
+                 <p class="error"><strong>Error:</strong> {{ error }}
+               {% endif %}
+    </div>
 	</body>
 </html>
